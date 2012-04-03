@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCFService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:44786/WCFService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:44786/WCFService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:44786/WCFService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OwlSecureWebService.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCFService_DBInitialize_InputMessage">
+    <wsdl:part name="parameters" element="tns:DBInitialize" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_DBInitialize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DBInitializeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_LoadAllItemFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllItemFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_LoadAllItemFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllItemFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_LoadAllCategoryFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllCategoryFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_LoadAllCategoryFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllCategoryFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_DeleteToDoItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToDoItem" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_DeleteToDoItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToDoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_AddToDoItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToDoItem" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_AddToDoItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToDoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_SaveChangesToDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangesToDB" />
+  </wsdl:message>
+  <wsdl:message name="IWCFService_SaveChangesToDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangesToDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCFService">
+    <wsdl:operation name="DBInitialize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFService/DBInitialize" message="tns:IWCFService_DBInitialize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFService/DBInitializeResponse" message="tns:IWCFService_DBInitialize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllItemFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFService/LoadAllItemFromDatabase" message="tns:IWCFService_LoadAllItemFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFService/LoadAllItemFromDatabaseResponse" message="tns:IWCFService_LoadAllItemFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllCategoryFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFService/LoadAllCategoryFromDatabase" message="tns:IWCFService_LoadAllCategoryFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFService/LoadAllCategoryFromDatabaseResponse" message="tns:IWCFService_LoadAllCategoryFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToDoItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFService/DeleteToDoItem" message="tns:IWCFService_DeleteToDoItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFService/DeleteToDoItemResponse" message="tns:IWCFService_DeleteToDoItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToDoItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFService/AddToDoItem" message="tns:IWCFService_AddToDoItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFService/AddToDoItemResponse" message="tns:IWCFService_AddToDoItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangesToDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFService/SaveChangesToDB" message="tns:IWCFService_SaveChangesToDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFService/SaveChangesToDBResponse" message="tns:IWCFService_SaveChangesToDB_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCFService" type="tns:IWCFService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DBInitialize">
+      <soap:operation soapAction="http://tempuri.org/IWCFService/DBInitialize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllItemFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IWCFService/LoadAllItemFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllCategoryFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IWCFService/LoadAllCategoryFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToDoItem">
+      <soap:operation soapAction="http://tempuri.org/IWCFService/DeleteToDoItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToDoItem">
+      <soap:operation soapAction="http://tempuri.org/IWCFService/AddToDoItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangesToDB">
+      <soap:operation soapAction="http://tempuri.org/IWCFService/SaveChangesToDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCFService">
+    <wsdl:port name="BasicHttpBinding_IWCFService" binding="tns:BasicHttpBinding_IWCFService">
+      <soap:address location="http://localhost:44786/WCFService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
