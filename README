@@ -1,1 +1,12 @@
-first commit of the OwlSecure Project
+•Provide secure storage of personal information such as online account username and password, identification number.
+•Synchronize securely in the cloud with the ability to download/upload information from multiple device.
+•Utilize the accessibility and portability of mobile device for instant data entry and retrieval. 
+
+Environment/Platform
+•Front end – Windows Phone 7
+•Server end – SQL server 
+
+Feature
+•Securely store of personal information
+•Sync in multiple device  
+•Easily access via Windows Phone 7
